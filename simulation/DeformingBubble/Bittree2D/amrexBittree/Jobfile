@@ -1,0 +1,18 @@
+# Configuration file for `jobrunner`
+
+job:
+  target: flashx
+  input:
+    - bittree.toml
+  archive:
+    - "INS*"
+    - "*.out"
+  clean:
+    - "INS*"
+    - "*.out"
+    - flashx
+    - flash.par
+    - "unitTest*"
+  setup:
+    - flashOptions.sh
+    - flashBuild.sh

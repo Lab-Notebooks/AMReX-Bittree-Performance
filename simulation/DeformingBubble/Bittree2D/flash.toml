@@ -1,0 +1,77 @@
+# 	Runtime parameters for the Deforming Bubble problem.
+Parfile.gr_pmRpDivergenceFree = 1
+Parfile.gr_pmRpNfieldDivf = 2
+Parfile.gr_pmRpConsvFluxes = ".TRUE."
+Parfile.gr_pmRpConsvFluxDensities = ".FALSE."
+
+# Settings for guard cell filling
+Parfile.gr_bcEnableApplyMixedGds = ".FALSE."
+Parfile.convertToConsvdForMeshCalls = ".FALSE."
+Parfile.convertToConsvdInMeshInterp = ".FALSE."
+Parfile.enableMaskedGCFill = ".TRUE."
+
+#   Divfree interpolation
+Parfile.amrexFaceInterpolator = "face_div_free"
+
+Parfile.wr_integrals_freq = -1
+
+#       Grid dimensionality and geometry
+Parfile.geometry = "cartesian"
+
+#       Size of computational volume
+Parfile.xmin = 0.0
+Parfile.xmax = 1.0
+Parfile.ymin = 0.0
+Parfile.ymax = 1.0
+
+#       Boundary conditions
+Parfile.xl_boundary_type = "noslip_ins"
+Parfile.xr_boundary_type = "noslip_ins"
+Parfile.yl_boundary_type = "noslip_ins"
+Parfile.yr_boundary_type = "noslip_ins"
+
+#       Simulation (grid, time, I/O) parameters
+Parfile.run_comment = "Deforming Bubble problem"
+Parfile.log_file = "INS_Deforming_Bubble.log"
+Parfile.basenm = "INS_Deforming_Bubble_"
+Parfile.restart = ".false."
+Parfile.nend = 50000
+Parfile.tmax = 2.0
+Parfile.ins_cflFlg = 0
+Parfile.ins_cfl = 1.0
+Parfile.ins_sigma = 1.0
+Parfile.ins_dtSpec = 1.0e-5
+Parfile.dtinit = 1.0e-5
+Parfile.tstep_change_factor = 1.0
+Parfile.ins_pressureCorrect = ".true."
+
+Parfile.plot_var_1 = "dust"
+Parfile.plot_var_2 = "velx"
+Parfile.plot_var_3 = "vely"
+Parfile.plot_var_4 = "dfun"
+
+Parfile.checkpointFileIntervalTime = 0.0
+Parfile.checkpointFileIntervalStep = 5000
+
+Parfile.plotFileIntervalTime = 0.0
+Parfile.plotFileIntervalStep = 1000
+
+Parfile.CSVSummaryAllProcs = ".TRUE."
+
+Parfile.sim_reInitFlow = ".true."
+
+# AMR parameters
+Parfile.nblockx = 4
+Parfile.nblocky = 4
+Parfile.nrefs = 2
+
+Parfile.lrefine_min = 1
+Parfile.lrefine_max = 5
+
+Parfile.refine_var_count = 1
+Parfile.refine_var_1 = "dfun"
+Parfile.refine_cutoff_1 = 0.0
+Parfile.derefine_cutoff_1 = -0.01
+
+# 	Flux Conservation for AMR
+Parfile.flux_correct = ".true."

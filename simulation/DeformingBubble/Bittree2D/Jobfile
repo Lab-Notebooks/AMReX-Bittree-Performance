@@ -1,0 +1,9 @@
+# Configuration file for `jobrunner`
+
+job:
+  input:
+    - flash.toml
+  setup:
+    - flashOptions.sh
+  submit:
+    - flashRun.sh
