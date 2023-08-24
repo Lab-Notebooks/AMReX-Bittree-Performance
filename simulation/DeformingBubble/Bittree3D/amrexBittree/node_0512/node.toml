@@ -1,0 +1,3 @@
+# node configuration
+Parfile.zmax =  128.0
+Parfile.nblockz = 512
