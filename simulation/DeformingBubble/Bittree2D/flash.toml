@@ -35,7 +35,7 @@ Parfile.run_comment = "Deforming Bubble problem"
 Parfile.log_file = "INS_Deforming_Bubble.log"
 Parfile.basenm = "INS_Deforming_Bubble_"
 Parfile.restart = ".false."
-Parfile.nend = 50000
+Parfile.nend = 100
 Parfile.tmax = 2.0
 Parfile.ins_cflFlg = 0
 Parfile.ins_cfl = 1.0
@@ -51,14 +51,14 @@ Parfile.plot_var_3 = "vely"
 Parfile.plot_var_4 = "dfun"
 
 Parfile.checkpointFileIntervalTime = 0.0
-Parfile.checkpointFileIntervalStep = 5000
+Parfile.checkpointFileIntervalStep = 2
 
 Parfile.plotFileIntervalTime = 0.0
-Parfile.plotFileIntervalStep = 1000
+Parfile.plotFileIntervalStep = 2
 
 Parfile.CSVSummaryAllProcs = ".TRUE."
 
-Parfile.sim_reInitFlow = ".true."
+Parfile.sim_reInitFlow = ".false."
 
 # AMR parameters
 Parfile.nblockx = 4

@@ -2,7 +2,7 @@
 
 # Setup AMReX
 if [ ! -d "AMReX" ]; then
-	git clone git@github.com:Box-Tools/amrex.git --branch bittree AMReX && cd AMReX
+	git clone git@github.com:Box-Tools/amrex.git --branch bittree-sept-2023 AMReX && cd AMReX
 else
 	cd AMReX
 fi
