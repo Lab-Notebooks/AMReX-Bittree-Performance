@@ -9,6 +9,10 @@ Overview of steps to get this lab notebook running.
 
 - Create a new sites folder for you machine see `sites/sedona` for an example
 
+- Run `configure`:
+  ```
+  ./configure -s <site-name>
+  ```
 
 - Setup software stack:
   ```
