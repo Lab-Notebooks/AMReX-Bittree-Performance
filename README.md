@@ -7,9 +7,15 @@ For instructions on how to use the notebook pelase see the README for these repo
 
 Overview of steps to get this lab notebook running.
 
-- Create a new sites folder for you machine see `sites/sedona` for an example
+1. Install Jobrunner, `pip install pyjobrunner==2023.08 --user`, make sure `~/.local/bin` is in your path.
+   
+2. Create a new sites folder for you machine see `sites/<site-name>`
+ 
+3. Copy `sites/sedona/environment.sh` and `sites/sedona/Makefile.h` to `sites/<site-name>`.
 
-- Run `configure`:
+4. Edit `sites/<site-name>/environment.sh` to set your MPI and HDF5 path.
+
+5. Run `configure`:
   ```
   ./configure -s <site-name>
   ```
