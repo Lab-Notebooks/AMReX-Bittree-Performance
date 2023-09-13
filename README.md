@@ -13,26 +13,40 @@ Overview of steps to get this lab notebook running.
  
 3. Copy `sites/sedona/environment.sh` and `sites/sedona/Makefile.h` to `sites/<site-name>`.
 
-4. Edit `sites/<site-name>/environment.sh` to set your MPI and HDF5 path.
+4. Edit `sites/<site-name>/environment.sh` to set `MPI_HOME` and `HDF5_HOME`. If HDF5 is not installed on your machine do step 7. 
 
 5. Run `configure`:
   ```
   ./configure -s <site-name>
   ```
 
-- Setup software stack:
+6. Setup software stack:
   ```
   jobrunner setup software/bittree
   jobrunner setup software/amrex
   jobrunner setup software/flashx
+  jobrunner setup software/flashkit
   ```
 
-- Setup a test simulation:
+7. If HDF5 is not available on your local machine do:
+  ```
+  jobrunner setup  software/hdf5
+  ```
+   
+8. Setup a test simulation:
   ```
   jobrunner setup simulation/DeformingBubble/Bittree2D/amrexBittree
   ```
 
-- Run the simulation
+9. Run the simulation
   ```
   jobrunner submit simulation/DeformingBubble/Bittree2D/amrexBittree
   ```
+
+10. Postprocessing:
+   ```
+   cd simulation/DeformingBubble/Bittree2D/amrexBittree
+   flashkit create xdmf --auto
+   ```
+    
+   This will create `INS_Deforming_Bubble.xmf` that can be opened in paraview.
