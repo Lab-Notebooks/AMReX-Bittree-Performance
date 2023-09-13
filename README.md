@@ -7,7 +7,7 @@ For instructions on how to use the notebook pelase see the README for these repo
 
 Overview of steps to get this lab notebook running.
 
-1. Install Jobrunner, `pip install pyjobrunner==2023.08 --user`, make sure `~/.local/bin` is in your path.
+1. Install Jobrunner, `pip install pyjobrunner==2023.8 --user`, make sure `~/.local/bin` is in your path.
    
 2. Create a new sites folder for you machine see `sites/<site-name>`
  
