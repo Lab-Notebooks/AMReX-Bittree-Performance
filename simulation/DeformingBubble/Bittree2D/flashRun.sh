@@ -2,4 +2,4 @@
 cd $JobWorkDir
 
 # launch mpi job
-mpirun -n 5 $JobWorkDir/job.target
+mpirun -n 10 $JobWorkDir/job.target

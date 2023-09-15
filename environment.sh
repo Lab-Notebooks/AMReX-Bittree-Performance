@@ -22,6 +22,15 @@ export AMREX3D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/3D"
 # Path to Flash-X
 export FLASHX_HOME="$PROJECT_HOME/software/flashx/Flash-X"
 
+# Flash-X test archive paths
+if ! [ $FLASHTEST_MAIN_ARCHIVE ]; then
+	export FLASHTEST_MAIN_ARCHIVE="$PROJECT_HOME/tests/MainArchive"
+fi
+
+if ! [ $FLASHTEST_LOCAL_ARCHIVE ]; then
+	export FLASHTEST_LOCAL_ARCHIVE="$PROJECT_HOME/tests/LocalArchive"
+fi
+
 # Output information to stdout
 echo "---------------------------------------------------------------------------------------"
 echo "Execution Environment:"
@@ -35,4 +44,7 @@ echo "AMREX2D_HOME=$AMREX2D_HOME"
 echo "AMREX3D_HOME=$AMREX3D_HOME"
 echo "BITTREE_2D_HOME=$BITTREE_2D_HOME"
 echo "BITTREE_3D_HOME=$BITTREE_3D_HOME"
+echo "FLASHTEST_MAIN_ARCHIVE=$FLASHTEST_MAIN_ARCHIVE"
+echo "FLASHTEST_LOCAL_ARCHIVE=$FLASHTEST_LOCAL_ARCHIVE"
+echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
 echo "---------------------------------------------------------------------------------------"
