@@ -97,7 +97,6 @@ FFLAGS_CUDA  = -I${CUDA_PATH}/include
 FFLAGS_MAGMA = -I${MAGMA_PATH}/include
 FFLAGS_OACC  = -fopenacc
 FFLAGS_UNIFYFS = -I${UNIFYFS_ROOT}
-FFLAGS_BITTREE = -I${BITTREE_PATH}/include
 
 OPT_FLAGS    = -g -Ofast -funroll-loops -fprefetch-loop-arrays
 TEST_FLAGS   = -g -O3
@@ -112,7 +111,7 @@ f90FLAGS     = ${F90FLAGS}
 F77FLAGS     = -fdefault-real-8 -fdefault-double-8 -fimplicit-none -Wno-argument-mismatch -cpp
 f77FLAGS     = ${F77FLAGS}
 
-FFLAGS_AMREX = -I${AMREX_PATH}/include
+CFLAGS_AMREX = -I${AMREX_PATH}/include
 CFLAGS_HDF5  = -I$(HDF5_PATH)/include ${PP}H5_USE_18_API
 CFLAGS_NCMPI = -I$(NCMPI_PATH)/include
 CFLAGS_HYPRE = -I${HYPRE_PATH}/include ${CFLAGS_LAPACK}
@@ -120,7 +119,6 @@ CFLAGS_CUDA  = -I${CUDA_PATH}/include
 CFLAGS_MAGMA = -I${MAGMA_PATH}/include
 CFLAGS_OACC  = -fopenacc
 CFLAGS_UNIFYFS = -I${UNIFYFS_ROOT}
-CFLAGS_BITTREE = -I${BITTREE_PATH}/include
 
 CFLAGS_OPT   = -c ${OPT_FLAGS}
 CFLAGS_TEST  = -c ${TEST_FLAGS}
@@ -153,6 +151,7 @@ LIB_MPI =
 
 LIB_STDCXX = -lstdc++
 LIB_AMREX = -L${AMREX_PATH}/lib -lamrex -lstdc++
+LIB_BITTREE = -L${BITTREE_PATH}/lib -lbittree
 LIB_HDF5  = -L${HDF5_PATH}/lib -lhdf5_fortran -lhdf5
 LIB_NCMPI = -L${NCMPI_PATH}/lib -lpnetcdf
 LIB_MATH  = ${LIB_ESSL}
@@ -161,7 +160,6 @@ LIB_CUDA  = -L${CUDA_PATH}/lib64 -lcusparse -lcusolver -lcublas -lcudart -lcuda
 LIB_MAGMA = -L$(MAGMA_PATH)/lib -lmagma -Wl,-rpath,$(MAGMA_PATH)/lib
 LIB_OACC  =
 LIB_UNIFYFS = -L${UNIFYFS_ROOT} -lunifyfs_mpi_gotcha
-LIB_BITTREE = -L${BITTREE_PATH}/lib -lbittree
  
 LIB_OPT   =
 LIB_DEBUG =

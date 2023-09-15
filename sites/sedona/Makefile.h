@@ -52,7 +52,7 @@ FFLAGS_TEST  = -ggdb -c -fdefault-real-8 -fdefault-double-8 \
 	       -ffree-line-length-none
 
 FFLAGS_HYPRE = -I${HYPRE_PATH}/include
-FFLAGS_AMREX = -I${AMREX_PATH}/include -I${BITTREE_PATH}/include
+FFLAGS_AMREX = -I${AMREX_PATH}/include
 FFLAGS_HDF5  = -DH5_USE_18_API
 F90FLAGS     =
 
@@ -71,7 +71,7 @@ CFLAGS_DEBUG = -ggdb -c -O0 -Wno-div-by-zero -Wundef \
 CFLAGS_TEST  = -c
 
 CFLAGS_HDF5  = -DH5_USE_18_API
-CFLAGS_AMREX = -I${AMREX_PATH}/include -I${BITTREE_PATH}/include
+CFLAGS_AMREX = -I${AMREX_PATH}/include
 CFLAGS_HYPRE = -I${HYPRE_PATH}/include
 PAPI_FLAGS   = 
 
@@ -106,7 +106,8 @@ LIB_MPI    =
 LIB_MPE    =
 LIB_NCMPI  =
 LIB_HYPRE  = -L${HYPRE_PATH}/lib -lHYPRE
-LIB_AMREX  = -L${AMREX_PATH}/lib -lamrex -lpthread -L${BITTREE_PATH}/lib -lbittree
+LIB_AMREX  = -L${AMREX_PATH}/lib -lamrex -lpthread
+LIB_BITTREE = -L${BITTREE_PATH}/lib -lbittree
 LIB_STDCXX = -lstdc++
 LIB_LAPACK = -llapack -lblas
 
