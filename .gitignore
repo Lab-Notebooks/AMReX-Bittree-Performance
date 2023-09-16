@@ -21,4 +21,7 @@ software/ann/ANN
 software/bittree/Bittree
 boxmem
 *jobnode.archive*
+*.tar.gz
+!tests/MainArchive/multiphase.simulations/2023-09-15.tar.gz
+!tests/MainArchive/multiphase.simulations/2023-09-15_8.tar.gz
 !software/flashx
