@@ -3,3 +3,7 @@
 job:
   input:
     - node.toml
+  archive:
+    - flash.par
+    - "*INS_Deforming_Bubble*"
+    - "*deforming-bubble*"
