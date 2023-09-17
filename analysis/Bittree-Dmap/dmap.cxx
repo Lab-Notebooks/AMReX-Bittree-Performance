@@ -2,7 +2,6 @@
 // vector and push values one
 // by one.
 #include <iostream>
-#include <vector>
 #include <AMReX_Vector.H>
 #include <AMReX_DistributionMapping.H>
 

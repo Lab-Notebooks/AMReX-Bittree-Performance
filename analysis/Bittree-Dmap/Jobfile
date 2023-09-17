@@ -1,3 +1,5 @@
 job:
   setup:
-    - dmap.sh
+    - runTests.sh
+  clean:
+    - a.out
