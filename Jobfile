@@ -16,11 +16,14 @@
 
 # schedular configuration
 schedular:
-  command: bash
+  command: bsub
   options:
-    - "#SBATCH --ntasks=10"
-    - "#SBATCH -t 0-30:00"
-    - "#SBATCH --job-name=boiling"
+    - "#BSUB -P ast136"
+    - "#BSUB -W 2:00"
+    - "#BSUB -J bt-nodes-64"
+    - "#BSUB -o o%J.deforming-bubble"
+    - "#BSUB -e o%J.deforming-bubble"
+    - "#BSUB -nnodes 64"
 
 # job configuration
 job:

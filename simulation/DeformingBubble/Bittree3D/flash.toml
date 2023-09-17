@@ -24,7 +24,7 @@ Parfile.xmax = 1.0
 Parfile.ymin = 0.0
 Parfile.ymax = 1.0
 Parfile.zmin = 0.0
-Parfile.zmax = 1.0
+#Parfile.zmax = 1.0
 
 #       Boundary conditions
 Parfile.xl_boundary_type = "noslip_ins"
@@ -66,7 +66,7 @@ Parfile.sim_reInitFlow = ".true."
 # AMR parameters
 Parfile.nblockx = 4
 Parfile.nblocky = 4
-Parfile.nblockz = 4
+#Parfile.nblockz = 4
 Parfile.nrefs = 2
 
 Parfile.lrefine_min = 1

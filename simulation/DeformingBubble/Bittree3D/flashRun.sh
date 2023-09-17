@@ -27,11 +27,11 @@ if [[ $SiteName == "summit-gcc" || $SiteName == "summit-pgi" ]]; then
 		-c ${NCORES_PER_RS} \
 		-b packed:${NCORES_PER_MPI} \
 		-d packed \
-		$JobWorkDir/job.target -par_file job.input
+		$JobWorkDir/job.target
 
 else
 
 	echo Running on $SiteName
 
-	mpirun $JobWorkDir/job.target -par_file job.input
+	mpirun $JobWorkDir/job.target
 fi
