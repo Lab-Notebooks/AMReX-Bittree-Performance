@@ -58,7 +58,7 @@ Parfile.plotFileIntervalStep = 1000
 
 Parfile.CSVSummaryAllProcs = ".TRUE."
 
-Parfile.sim_reInitFlow = ".false."
+Parfile.sim_reInitFlow = ".true."
 
 # AMR parameters
 Parfile.nblockx = 4
