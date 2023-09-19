@@ -2,7 +2,7 @@
 NodeDir=$(realpath .)
 
 # setup Flash-X
-cd $FLASHX_HOME && git checkout amrex-facevars-updates && ./setup $FlashOptions -objdir=object_am
+cd $FLASHX_HOME && git checkout $FlashSha && ./setup $FlashOptions -objdir=object_am
 
 # compile the simulation and copy files
 cd $FLASHX_HOME/object_am && make -j && cp flashx $NodeDir/
