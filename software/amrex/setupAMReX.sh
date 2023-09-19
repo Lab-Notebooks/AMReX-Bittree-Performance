@@ -2,7 +2,10 @@
 
 # Setup AMReX
 if [ ! -d "AMReX" ]; then
-	git clone git@github.com:Box-Tools/amrex.git --branch bittree-sept-2023 AMReX && cd AMReX
+	git clone git@github.com:Box-Tools/amrex.git --branch main AMReX && cd AMReX
+
+	# checkout desired sha-1
+	git checkout 8e3cb7315
 else
 	cd AMReX
 fi

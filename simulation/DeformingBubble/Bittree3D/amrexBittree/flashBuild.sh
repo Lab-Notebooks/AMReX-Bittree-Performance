@@ -2,7 +2,7 @@
 NodeDir=$(realpath .)
 
 # setup Flash-X
-cd $FLASHX_HOME && git checkout amrex-bittree-updates && ./setup $FlashOptions
+cd $FLASHX_HOME && git checkout ff325d0a && ./setup $FlashOptions
 
 # compile the simulation and copy files
 cd $FLASHX_HOME/object && make -j && cp flashx $NodeDir/

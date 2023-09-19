@@ -4,8 +4,8 @@
 if [ ! -d "Bittree" ]; then
 	git clone git@github.com:Flash-X/Bittree.git && cd Bittree
 
-	# checkout desired branch
-	git checkout main
+	# checkout desired sha-1
+	git checkout 0ea55d7
 else
 	cd Bittree
 fi
