@@ -16,7 +16,7 @@
 
 # schedular configuration
 schedular:
-  command: bash
+  command: bsub
   options:
     - "#BSUB -P ast136"
     - "#BSUB -W 2:00"
