@@ -1,6 +1,8 @@
+# Toml configuration file
+
 [Parfile]
 
-  # 	Runtime parameters for the Deforming Bubble problem.
+  # Runtime parameters for the Deforming Bubble problem.
   gr_pmRpDivergenceFree = 1
   gr_pmRpNfieldDivf = 2
   gr_pmRpConsvFluxes = ".TRUE."
@@ -12,12 +14,12 @@
   convertToConsvdInMeshInterp = ".FALSE."
   enableMaskedGCFill = ".TRUE."
 
-  #   Divfree interpolation
+  # Divfree interpolation
   amrexFaceInterpolator = "face_div_free"
 
   wr_integrals_freq = -1
 
-  #       Grid dimensionality and geometry
+  # Grid dimensionality and geometry
   geometry = "cartesian"
 
   #       Size of computational volume
@@ -77,7 +79,3 @@
 
   # 	Flux Conservation for AMR
   flux_correct = ".true."
-
-[Heater]
-
-  param = "someval"

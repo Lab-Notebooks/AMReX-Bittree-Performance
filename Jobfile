@@ -16,14 +16,11 @@
 
 # schedular configuration
 schedular:
-  command: bsub
+  command: sbatch
   options:
-    - "#BSUB -P ast136"
-    - "#BSUB -W 2:00"
-    - "#BSUB -J bt-nodes-64"
-    - "#BSUB -o o%J.deforming-bubble"
-    - "#BSUB -e o%J.deforming-bubble"
-    - "#BSUB -nnodes 64"
+    - "#SBATCH --ntasks=10"
+    - "#SBATCH -t 0-30:00"
+    - "#SBATCH --job-name=am-divfree"
 
 # job configuration
 job:
