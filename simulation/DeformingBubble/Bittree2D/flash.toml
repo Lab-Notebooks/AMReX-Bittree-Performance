@@ -1,77 +1,83 @@
-# 	Runtime parameters for the Deforming Bubble problem.
-Parfile.gr_pmRpDivergenceFree = 1
-Parfile.gr_pmRpNfieldDivf = 2
-Parfile.gr_pmRpConsvFluxes = ".TRUE."
-Parfile.gr_pmRpConsvFluxDensities = ".FALSE."
+[Parfile]
 
-# Settings for guard cell filling
-Parfile.gr_bcEnableApplyMixedGds = ".FALSE."
-Parfile.convertToConsvdForMeshCalls = ".FALSE."
-Parfile.convertToConsvdInMeshInterp = ".FALSE."
-Parfile.enableMaskedGCFill = ".TRUE."
+  # 	Runtime parameters for the Deforming Bubble problem.
+  gr_pmRpDivergenceFree = 1
+  gr_pmRpNfieldDivf = 2
+  gr_pmRpConsvFluxes = ".TRUE."
+  gr_pmRpConsvFluxDensities = ".FALSE."
 
-#   Divfree interpolation
-Parfile.amrexFaceInterpolator = "face_div_free"
+  # Settings for guard cell filling
+  gr_bcEnableApplyMixedGds = ".FALSE."
+  convertToConsvdForMeshCalls = ".FALSE."
+  convertToConsvdInMeshInterp = ".FALSE."
+  enableMaskedGCFill = ".TRUE."
 
-Parfile.wr_integrals_freq = -1
+  #   Divfree interpolation
+  amrexFaceInterpolator = "face_div_free"
 
-#       Grid dimensionality and geometry
-Parfile.geometry = "cartesian"
+  wr_integrals_freq = -1
 
-#       Size of computational volume
-Parfile.xmin = 0.0
-Parfile.xmax = 1.0
-Parfile.ymin = 0.0
-Parfile.ymax = 1.0
+  #       Grid dimensionality and geometry
+  geometry = "cartesian"
 
-#       Boundary conditions
-Parfile.xl_boundary_type = "noslip_ins"
-Parfile.xr_boundary_type = "noslip_ins"
-Parfile.yl_boundary_type = "noslip_ins"
-Parfile.yr_boundary_type = "noslip_ins"
+  #       Size of computational volume
+  xmin = 0.0
+  xmax = 1.0
+  ymin = 0.0
+  ymax = 1.0
 
-#       Simulation (grid, time, I/O) parameters
-Parfile.run_comment = "Deforming Bubble problem"
-Parfile.log_file = "INS_Deforming_Bubble.log"
-Parfile.basenm = "INS_Deforming_Bubble_"
-Parfile.restart = ".false."
-Parfile.nend = 50000
-Parfile.tmax = 2.0
-Parfile.ins_cflFlg = 0
-Parfile.ins_cfl = 1.0
-Parfile.ins_sigma = 1.0
-Parfile.ins_dtSpec = 1.0e-5
-Parfile.dtinit = 1.0e-5
-Parfile.tstep_change_factor = 1.0
-Parfile.ins_pressureCorrect = ".true."
+  #       Boundary conditions
+  xl_boundary_type = "noslip_ins"
+  xr_boundary_type = "noslip_ins"
+  yl_boundary_type = "noslip_ins"
+  yr_boundary_type = "noslip_ins"
 
-Parfile.plot_var_1 = "dust"
-Parfile.plot_var_2 = "velx"
-Parfile.plot_var_3 = "vely"
-Parfile.plot_var_4 = "dfun"
+  #       Simulation (grid, time, I/O) parameters
+  run_comment = "Deforming Bubble problem"
+  log_file = "INS_Deforming_Bubble.log"
+  basenm = "INS_Deforming_Bubble_"
+  restart = ".false."
+  nend = 50000
+  tmax = 2.0
+  ins_cflFlg = 0
+  ins_cfl = 1.0
+  ins_sigma = 1.0
+  ins_dtSpec = 1.0e-5
+  dtinit = 1.0e-5
+  tstep_change_factor = 1.0
+  ins_pressureCorrect = ".true."
 
-Parfile.checkpointFileIntervalTime = 0.0
-Parfile.checkpointFileIntervalStep = 1000
+  plot_var_1 = "dust"
+  plot_var_2 = "velx"
+  plot_var_3 = "vely"
+  plot_var_4 = "dfun"
 
-Parfile.plotFileIntervalTime = 0.0
-Parfile.plotFileIntervalStep = 1000
+  checkpointFileIntervalTime = 0.0
+  checkpointFileIntervalStep = 1000
 
-Parfile.CSVSummaryAllProcs = ".TRUE."
+  plotFileIntervalTime = 0.0
+  plotFileIntervalStep = 1000
 
-Parfile.sim_reInitFlow = ".true."
+  CSVSummaryAllProcs = ".TRUE."
 
-# AMR parameters
-Parfile.nblockx = 4
-Parfile.nblocky = 4
-Parfile.nrefs = 2
+  sim_reInitFlow = ".true."
 
-Parfile.lrefine_min = 1
-Parfile.lrefine_max = 5
+  # AMR parameters
+  nblockx = 4
+  nblocky = 4
+  nrefs = 2
 
-Parfile.refine_var_count = 1
-Parfile.refine_var_1 = "dfun"
-Parfile.refine_cutoff_1 = 0.0
-Parfile.derefine_cutoff_1 = -0.01
+  lrefine_min = 1
+  lrefine_max = 5
 
-# 	Flux Conservation for AMR
-Parfile.flux_correct = ".true."
+  refine_var_count = 1
+  refine_var_1 = "dfun"
+  refine_cutoff_1 = 0.0
+  derefine_cutoff_1 = -0.01
+
+  # 	Flux Conservation for AMR
+  flux_correct = ".true."
+
+[Heater]
+
+  param = "someval"
