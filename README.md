@@ -71,3 +71,12 @@ Overview of steps to get this lab notebook running.
    flashkit create xdmf --auto
    ```    
    This will create `INS_Deforming_Bubble.xmf` that can be opened in paraview.
+
+
+## Co-Authors
+
+- Tom Klosterman - https://github.com/tklos96
+- Weiqun Zhang - https://github.com/WeiqunZhang
+- Klaus Weide - https://github.com/kweide
+- Ann Almgren - https://github.com/asalmgren
+- Anshu Dubey - https://github.com/adubey64 
