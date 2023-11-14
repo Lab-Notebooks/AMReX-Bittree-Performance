@@ -7,6 +7,16 @@ For instructions on how to use the notebook pelase see the README for these repo
 Data repository is located here:
 - https://anl.box.com/s/dzc97mnedg0pdj1ddipu7yl59z4ag30f
 
+## Overview
+
+This execution environment was designed to optimize regrid operation when using AMReX (https://github.com/AMReX-Codes/amrex) in Octree mode. Based on our previous work with Flash-X (https://github.com/AMReX-Codes/amrex) and Paramesh, we found that quering a memory efficient bitmap of block-structured AMR tree to access relevant neighbor information alleviates the need for communication between processes and reduces overhead. The bitmap is managed using the Bittree library (https://github.com/Flash-X/Bittree)
+
+<p align="center"> <img src="analysis/deforming-bubble.gif" width="1000" style="border:none;background:none;"/> </p>
+
+Updates to AMReX introduced
+
+## Quickstart
+
 Overview of steps to get this lab notebook running.
 
 1. Install Jobrunner, `pip install pyjobrunner==2023.8 --user`, make sure `~/.local/bin` is in your path.
@@ -55,3 +65,5 @@ Overview of steps to get this lab notebook running.
    flashkit create xdmf --auto
    ```    
    This will create `INS_Deforming_Bubble.xmf` that can be opened in paraview.
+
+## Performance results
