@@ -9,11 +9,17 @@ Data repository is located here:
 
 ## Overview
 
-This execution environment was designed to optimize regrid operation when using AMReX (https://github.com/AMReX-Codes/amrex) in Octree mode. Based on our previous work with Flash-X (https://github.com/AMReX-Codes/amrex) and Paramesh, we found that quering a memory efficient bitmap of block-structured AMR tree to access relevant neighbor information alleviates the need for communication between processes and reduces overhead. The bitmap is managed using the Bittree library (https://github.com/Flash-X/Bittree)
+This execution environment was designed to optimize regrid operation when using AMReX (https://github.com/AMReX-Codes/amrex) in Octree mode. Based on our previous work with Flash-X (https://github.com/AMReX-Codes/amrex) and Paramesh, we found that quering a memory efficient bitmap of block-structured AMR tree to access relevant neighbor information alleviates the need for communication between processes and reduces overhead. The bitmap is managed using the Bittree library (https://github.com/Flash-X/Bittree).
 
-<p align="center"> <img src="analysis/deforming-bubble.gif" width="1000" style="border:none;background:none;"/> </p>
+The test problem invovled tracking deformation of a level-set function under a static velocity field. The velocity field was described using an analytical solution that resulted in a vortex. The equations for level-set advection and redistancing are described below,
 
-Updates to AMReX introduced
+<p align="center"> <img src="analysis/deforming-bubble.gif" width="800" style="border:none;background:none;"/> </p>
+
+Refinement of the grid was designed to track zero value of the level-set which corresponds to the liquid-gas interface. Performance of the refinement/derefinement algorithm was compared for three different configuration involving Paramesh with Bittree, AMReX without Bittree (Native Mode), and AMReX with Bittree resulting in the following performance result:
+
+https://github.com/Lab-Notebooks/AMReX-Bittree-Performance/blob/main/analysis/Performance.ipynb
+
+The results clearly demonstrate the improvement in performance when using AMReX with Bittree during regrid. 
 
 ## Quickstart
 
@@ -65,5 +71,3 @@ Overview of steps to get this lab notebook running.
    flashkit create xdmf --auto
    ```    
    This will create `INS_Deforming_Bubble.xmf` that can be opened in paraview.
-
-## Performance results
